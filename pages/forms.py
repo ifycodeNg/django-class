@@ -1,0 +1,14 @@
+from .models import Post
+from django import forms
+
+
+class PostForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = ("title", "author", "body", "hero_image")
+
+
+class PostEditForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = ("title", "body", "hero_image")
